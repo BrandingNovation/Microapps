@@ -1,0 +1,17 @@
+# Use Node.js base image
+FROM node:20-alpine
+
+# Create app directory
+WORKDIR /usr/src/app
+
+# Copy everything into container
+COPY . .
+
+# Install dependencies if package.json exists
+RUN if [ -f package.json ]; then npm install; fi
+
+# Expose the default port
+EXPOSE 3000
+
+# Start app (update this if your entry point is different)
+CMD ["npx", "serve", ".", "-l", "3000"]
