@@ -1,0 +1,23 @@
+{
+  "nodes": [
+    {
+      "parameters": {
+        "fromEmail": "you@yourdomain.com",
+        "toEmail": "someone@example.com",
+        "subject": "Test from n8n",
+        "text": "This is a test email sent from Zoho via n8n"
+      },
+      "name": "Send Email",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 1,
+      "position": [500, 300],
+      "credentials": {
+        "smtp": {
+          "id": "your-zoho-credential-id",
+          "name": "Zoho SMTP"
+        }
+      }
+    }
+  ],
+  "connections": {}
+}
